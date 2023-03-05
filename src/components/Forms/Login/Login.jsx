@@ -4,7 +4,7 @@ import Button from "../../UI/Button";
 import Input from "../../UI/Input";
 import styles from "./Login.module.scss";
 
-export const Login = () => {
+export const LoginForm = () => {
   const errors = useActionData();
 
   return (
