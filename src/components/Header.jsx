@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MainNavigation from "./MainNavigation";
-import logo from "../img/JennyHaniver.svg";
 import styles from "./Header.module.scss";
 
 const Header = () => {

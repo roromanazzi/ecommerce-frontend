@@ -4,6 +4,7 @@
   @include font(12px, map-get($secondary-color, light));
   @include title-bg(map-get($primary-color, main), 42px);
 
+  width: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;

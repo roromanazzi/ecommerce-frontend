@@ -1,0 +1,59 @@
+@import "/src/styles/variables";
+
+.container {
+  @include page();
+}
+
+.body {
+  @include font(12px, map-get($secondary-color, main));
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.topPage {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.leftPage {
+  text-align: left;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.leftPage :last-of-type {
+  padding-top: 120px;
+}
+
+.rightPage {
+  text-align: right;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.rightPage :last-of-type {
+  font-size: 16px;
+}
+
+.rightPage p {
+  padding-top: 120px;
+}
+
+.bottomPage {
+  padding: 0 120px 80px;
+  font-size: 20px;
+}
+
+.openParragraph {
+  font-size: 40px;
+  line-height: 60px;
+  padding: 40px 0;
+}
