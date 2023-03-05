@@ -1,0 +1,98 @@
+// colors dark theme
+
+$primary-color: (
+  "main": #121420,
+  "light": #24283f,
+  "dark": #06060a,
+);
+
+$secondary-color: (
+  "main": #b2b2b2,
+  "light": #d9d9d9,
+  "dark": #6a6a6a,
+);
+
+$third-color: (
+  "main": #3e5c76,
+  "light": #5882a6,
+  "dark": #283c4c,
+);
+
+$fourth-color: (
+  "main": #2c2b3c,
+  "light": #4b4965,
+  "dark": #100f15,
+);
+
+$font: "Jura", sans-serif;
+
+// link variants dark theme
+$primary-link: (
+  "color": map-get($primary-color, main),
+  "hover-color": map-get($secondary-color, light),
+);
+
+$secondary-link: (
+  "color": map-get($secondary-color, light),
+  "hover-color": map-get($third-color, main),
+);
+
+@mixin title-bg($bg-color, $height) {
+  height: $height;
+  line-height: $height;
+  width: inherit;
+  margin: 1px;
+
+  background-color: $bg-color;
+  border-radius: 15px;
+}
+
+// brand name and page title
+@mixin font($font-size, $color) {
+  font-family: $font;
+  font-weight: 600;
+  text-align: center;
+
+  color: $color;
+  font-size: $font-size;
+}
+
+// page layout
+@mixin page {
+  width: 99%;
+  padding: 2px 4px;
+  height: 100vh;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// links
+@mixin link($variant) {
+  all: unset;
+  cursor: pointer;
+
+  padding: 16px;
+
+  font-family: $font;
+  font-size: 12px;
+  font-weight: 600;
+  color: map-get($variant, color);
+
+  transition: 100ms;
+
+  &:hover {
+    color: map-get($variant, hover-color);
+    transition: 100ms;
+  }
+  &:active {
+    color: map-get($variant, hover-color);
+  }
+}
+
+a,
+li {
+  all: unset;
+}

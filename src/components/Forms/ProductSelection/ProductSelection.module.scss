@@ -1,0 +1,42 @@
+@import "src/styles/variables";
+
+.productDetailContainer {
+  width: 240px;
+  height: 420px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dataContainer {
+  width: 240px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productTitle {
+  @include title-bg(map-get($fourth-color, main), 36px);
+  @include font(16px, map-get($secondary-color, main));
+}
+
+.productDescription {
+  @include font(12px, map-get($secondary-color, main));
+}
+
+.price {
+  @include font(16px, map-get($secondary-color, main));
+}
+
+.formContainer {
+  height: 220px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}

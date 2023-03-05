@@ -1,0 +1,65 @@
+@import "src/styles/variables";
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputContainer input {
+  all: unset;
+  height: 28px;
+
+  background-color: white;
+  border: 0.5px solid map-get($third-color, main);
+  border-radius: 12px;
+
+  display: flex;
+
+  text-indent: 8px;
+  line-height: 28px;
+  font-size: 12px;
+  font-family: $font;
+
+  &:focus {
+    border: 1.5px solid map-get($third-color, main);
+  }
+
+  &::placeholder {
+    color: map-get($secondary-color, main);
+  }
+}
+
+label {
+  @include font(12px, map-get($primary-color, main));
+}
+
+.row-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.row-input input {
+  text-transform: uppercase;
+}
+
+.long-input {
+  width: 360px;
+}
+
+.short-input {
+  width: 120px;
+}
+
+.no-label-input input {
+  text-indent: 0px;
+  text-align: center;
+  width: 84px;
+  &::-webkit-outer-spin-button,
+  &::-webkit-outer-spin-button {
+    opacity: 0;
+  }
+}

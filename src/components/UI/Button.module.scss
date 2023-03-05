@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300");
+@import "src/styles/variables";
+
+@mixin button() {
+  @include font(12px, map-get($secondary-color, light));
+  width: 180px;
+  padding: 4px 16px;
+  height: 28px;
+
+  border: none;
+  border-radius: 16px;
+
+  transition: 100ms;
+
+  &:hover {
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.532);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    background-color: map-get($secondary-color, light);
+    color: map-get($third-color, dark);
+  }
+}
+
+.primary {
+  @include button();
+  background-color: map-get($fourth-color, light);
+}
+
+.secondary {
+  @include button();
+  background-color: map-get($third-color, main);
+}

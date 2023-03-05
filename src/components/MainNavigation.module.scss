@@ -1,0 +1,13 @@
+@import "/src/styles/variables";
+
+.navbarContainer {
+  @include title-bg(map-get($primary-color, main), 36px);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbarContainer li {
+  @include link($secondary-link);
+}

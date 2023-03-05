@@ -1,0 +1,14 @@
+@import "/src/styles/variables";
+
+.titleContainer {
+  @include font(12px, map-get($secondary-color, light));
+  @include title-bg(map-get($fourth-color, main), 36px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.subtitle {
+  font-weight: 100;
+}
