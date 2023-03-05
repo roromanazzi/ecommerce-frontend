@@ -48,7 +48,6 @@ export const ProductSelection = () => {
   return (
     <div className={styles.productDetailContainer}>
       <h3 className={styles.productTitle}>Product title</h3>
-
       <p className={styles.productDescription}>Product description</p>
       <div>
         <p className={styles.price}>$3400</p>
