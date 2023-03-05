@@ -3,7 +3,6 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .inputContainer input {
@@ -31,7 +30,9 @@
 }
 
 label {
-  @include font(12px, map-get($primary-color, main));
+  @include font(12px, map-get($secondary-color, main));
+  text-align: start;
+  padding: 4px;
 }
 
 .row-input {
@@ -51,7 +52,7 @@ label {
 }
 
 .short-input {
-  width: 120px;
+  width: 160px;
 }
 
 .no-label-input input {

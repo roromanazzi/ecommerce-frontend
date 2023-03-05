@@ -6,6 +6,7 @@
   width: 180px;
   padding: 4px 16px;
   height: 28px;
+  line-height: 8px;
 
   border: none;
   border-radius: 16px;
@@ -15,6 +16,7 @@
   &:hover {
     box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.532);
     transform: translateY(-2px);
+    cursor: pointer;
   }
 
   &:active {

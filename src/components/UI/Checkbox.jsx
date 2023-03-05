@@ -1,7 +1,15 @@
 import React from "react";
 import styles from "./Checkbox.module.scss";
 
-const Checkbox = ({ label, placeholder, onSelect, id, name, value }) => {
+const Checkbox = ({
+  label,
+  placeholder,
+  onSelect,
+  id,
+  name,
+  value,
+  checked,
+}) => {
   return (
     <div className={styles.container}>
       <input
@@ -12,6 +20,7 @@ const Checkbox = ({ label, placeholder, onSelect, id, name, value }) => {
         placeholder={placeholder}
         onSelect={onSelect}
         value={value}
+        checked={checked}
       />
       {label && (
         <label htmlFor={id} className={styles.label}>

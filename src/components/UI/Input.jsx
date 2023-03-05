@@ -17,6 +17,7 @@ const Input = ({
   id,
   name,
   value,
+  required,
 }) => {
   const className = classNames[variant];
 
@@ -31,6 +32,7 @@ const Input = ({
         placeholder={placeholder}
         value={value}
         min={0}
+        required={required}
       />
     </div>
   );
