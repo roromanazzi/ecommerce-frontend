@@ -8,6 +8,7 @@ import {
 import App from "./App";
 import { action } from "./components/Forms/Login/loginAction";
 import { AboutPage } from "./pages/About";
+import CollectionsPage from "./pages/Collections";
 import LoginPage from "./pages/Login";
 import { ProductDetailPage } from "./pages/ProductDetail";
 import { ProductsPage } from "./pages/Products";
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       { path: "about", element: <AboutPage /> },
       {
         path: "products",
-        element: <ProductsPage />,
+        element: <CollectionsPage />,
         children: [{ path: ":id", element: <ProductDetailPage /> }],
       },
       { path: "login", element: <LoginPage />, action: action },

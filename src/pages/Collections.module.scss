@@ -1,0 +1,9 @@
+@import "/src/styles/variables";
+
+.container {
+  height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

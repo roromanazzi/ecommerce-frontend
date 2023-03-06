@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
-import { PageTitle } from "../components/UI/PageTitle";
 import styles from "./About.module.scss";
 import { TitleLayout } from "./Root";
 

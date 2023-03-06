@@ -12,3 +12,18 @@
 .subtitle {
   font-weight: 100;
 }
+
+.newArrival {
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+  background-image: url(../../img/with-logo-1.jpg);
+  background-size: cover;
+  background-position: -90%;
+}
+
+.newArrival .titleContainer {
+  @include title-bg(map-get($fourth-color, dark), 52px);
+}

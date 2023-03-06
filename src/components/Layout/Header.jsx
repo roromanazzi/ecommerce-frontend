@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MainNavigation from "./MainNavigation";
 import styles from "./Header.module.scss";
-import logo from "../img/JennyHaniver.svg";
+import logo from "../../img/JennyHaniver.svg";
 
 const Header = () => {
   return (
