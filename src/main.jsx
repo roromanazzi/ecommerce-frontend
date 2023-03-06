@@ -7,14 +7,29 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import { action } from "./components/Forms/Login/loginAction";
+import { AboutPage } from "./pages/About";
+import LoginPage from "./pages/Login";
+import { ProductDetailPage } from "./pages/ProductDetail";
+import { RootLayout } from "./pages/Root";
+import { SignupPage } from "./pages/Signup";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    action: action,
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <App /> },
+      { path: "about", element: <AboutPage /> },
+      {
+        path: "products",
+        element: <ProductsPage />,
+        children: [{ path: "/:id", element: <ProductDetailPage /> }],
+      },
+      { path: "sale", element: <SalePage /> },
+      { path: "login", element: <LoginPage />, action: action },
+      { path: "signup", element: <SignupPage /> },
+    ],
   },
-  { path: "*", element: <Navigate to="/" /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

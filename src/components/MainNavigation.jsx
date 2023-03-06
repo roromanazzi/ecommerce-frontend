@@ -8,6 +8,7 @@ const MainNavigation = () => {
       <ul className={styles.navbarContainer}>
         <li>
           <NavLink
+            to="/"
             className={({ isActive }) => {
               isActive ? styles.active : undefined;
             }}
@@ -17,6 +18,7 @@ const MainNavigation = () => {
         </li>
         <li>
           <NavLink
+            to="/About"
             className={({ isActive }) => {
               isActive ? styles.active : undefined;
             }}
@@ -26,6 +28,7 @@ const MainNavigation = () => {
         </li>
         <li>
           <NavLink
+            to="/Products"
             className={({ isActive }) => {
               isActive ? styles.active : undefined;
             }}
@@ -35,6 +38,7 @@ const MainNavigation = () => {
         </li>
         <li>
           <NavLink
+            to="/Sale"
             className={({ isActive }) => {
               isActive ? styles.active : undefined;
             }}

@@ -6,6 +6,12 @@ import { Form } from "react-router-dom";
 import styles from "./ProductSelection.module.scss";
 
 export const ProductSelection = () => {
+  const productDescription = `Material: 100% algodón suave y duradero.\n
+Estilo: Camiseta de manga corta con cuello redondo y corte clásico.\n
+Diseño: Pepito perez.\n
+Cuidado: Lavar a máquina en agua fría con colores similares. Secar en secadora a baja temperatura o dejar secar al aire libre para una vida útil más larga. \n
+`;
+
   const sizes = [
     {
       name: "small",
@@ -45,11 +51,12 @@ export const ProductSelection = () => {
       isAvailable: true,
     },
   ];
+
   return (
     <div className={styles.productDetailContainer}>
       <h3 className={styles.productTitle}>Product title</h3>
-      <p className={styles.productDescription}>Product description</p>
-      <div>
+      <p className={styles.productDescription}>{productDescription}</p>
+      <div className={styles.wrapper}>
         <p className={styles.price}>$3400</p>
         <Form className={styles.formContainer}>
           <div className={styles.dataContainer}>

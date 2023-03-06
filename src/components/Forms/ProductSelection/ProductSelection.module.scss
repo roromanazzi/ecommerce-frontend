@@ -12,11 +12,17 @@
 
 .dataContainer {
   width: 240px;
-  height: 120px;
+  height: 80px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .productTitle {
@@ -33,7 +39,7 @@
 }
 
 .formContainer {
-  height: 220px;
+  height: 180px;
 
   display: flex;
   align-items: center;
