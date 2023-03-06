@@ -13,6 +13,9 @@
 }
 
 .links a {
-  @include link($primary-link);
+  @include link($secondary-link);
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 4px 0;
 }

@@ -6,12 +6,7 @@ import { ProductDetailPage } from "./pages/ProductDetail";
 import { ProductsPage } from "./pages/Products";
 
 function App() {
-  return (
-    <>
-      Cahu
-      <ProductsPage />
-    </>
-  );
+  return <></>;
 }
 
 export default App;

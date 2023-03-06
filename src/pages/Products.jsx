@@ -6,9 +6,9 @@ import { TitleLayout } from "./Root";
 export const ProductsPage = () => {
   return (
     <TitleLayout
-      leftSubtitle="SS (spring summer duh) 2023"
-      title="HUUUMAUUUACA Jr."
-      rightSubtitle="Pepito pérez sólo"
+      leftSubtitle="AW 2023"
+      title="Seawolf colection"
+      rightSubtitle="Pepito pérez"
     >
       <ProductsList />
     </TitleLayout>

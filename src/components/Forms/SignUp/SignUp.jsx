@@ -1,11 +1,13 @@
 import React from "react";
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useActionData } from "react-router-dom";
 import Button from "../../UI/Button";
 import Checkbox from "../../UI/Checkbox";
 import Input from "../../UI/Input";
 import styles from "./Signup.module.scss";
 
 const SignUpForm = () => {
+  const errors = useActionData();
+
   return (
     <>
       <Form className={styles.form}>

@@ -19,9 +19,10 @@ export const TitleLayout = ({
   title,
   leftSubtitle,
   rightSubtitle,
+  className,
 }) => {
   return (
-    <div>
+    <div className={className}>
       <PageTitle {...{ title, leftSubtitle, rightSubtitle }} />
       {children}
     </div>

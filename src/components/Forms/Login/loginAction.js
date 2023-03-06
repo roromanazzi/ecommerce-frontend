@@ -18,7 +18,7 @@ export async function action({ request }) {
     errors.password = "La contraseña debe tener al menos 8 caracteres.";
   }
 
-  if (Object.keys(errors).length) {
+  if (Object.keys(errors).length > 0) {
     return errors;
   }
 
