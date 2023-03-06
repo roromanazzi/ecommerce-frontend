@@ -45,6 +45,7 @@ export const CollectionsList = () => {
     <div className={styles.container}>
       {data.map((collection) => (
         <Link
+          to="products"
           key={collection.id}
           className={styles.newArrival}
           style={{ backgroundImage: `url(${collection.imgSrc})` }}
