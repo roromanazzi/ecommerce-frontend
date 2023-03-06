@@ -5,9 +5,15 @@
 
   display: flex;
   justify-content: flex-start;
+  gap: 24px;
+  padding-left: 16px;
   align-items: center;
 }
 
 .navbarContainer li {
   @include link($secondary-link);
+}
+
+.navbarContainer a {
+  display: block;
 }

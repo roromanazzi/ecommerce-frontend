@@ -1,8 +1,20 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import { PageTitle } from "../components/UI/PageTitle";
 
-export const RootLayout = ({
+export const RootLayout = () => {
+  return (
+    <div>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
+};
+
+export const TitleLayout = ({
   children,
   title,
   leftSubtitle,
@@ -10,14 +22,7 @@ export const RootLayout = ({
 }) => {
   return (
     <div>
-      <Header />
-      {title && (
-        <PageTitle
-          title={title}
-          leftSubtitle={leftSubtitle}
-          rightSubtitle={rightSubtitle}
-        />
-      )}
+      <PageTitle {...{ title, leftSubtitle, rightSubtitle }} />
       {children}
     </div>
   );

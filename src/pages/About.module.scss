@@ -1,10 +1,6 @@
 @import "/src/styles/variables";
 
 .container {
-  @include page();
-}
-
-.body {
   @include font(12px, map-get($secondary-color, main));
   height: 1200px;
   display: flex;
@@ -52,7 +48,7 @@
   font-size: 20px;
 }
 
-.openParragraph {
+.openParagraph {
   font-size: 40px;
   line-height: 60px;
   padding: 40px 0;

@@ -1,0 +1,30 @@
+@import "/src/styles/variables";
+
+.productContainer {
+  width: 200px;
+  height: 320px;
+  margin: 12px 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.productTitle {
+  @include font(16px, map-get($secondary-color, main));
+  @include title-bg(map-get($fourth-color, main), 28px);
+  border-radius: 8px;
+}
+.productPrice {
+  @include font(16px, map-get($secondary-color, main));
+}
+.imgContainer {
+  width: 200px;
+  height: 260px;
+}
+
+.productImg {
+  max-block-size: 240px;
+  min-block-size: -webkit-fill-available;
+  inline-size: -webkit-fill-available;
+  border-radius: 8px;
+}
