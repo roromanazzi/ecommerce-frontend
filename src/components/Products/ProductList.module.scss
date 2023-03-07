@@ -5,3 +5,13 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.product {
+  transition: 600ms;
+
+  &:hover {
+    filter: grayscale(0.8);
+    transition: 300ms;
+    cursor: pointer;
+  }
+}

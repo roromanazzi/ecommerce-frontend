@@ -9,7 +9,7 @@ const LoginPage = () => {
       <LoginForm />
       <div className={styles.links}>
         <Link>Olvide mi contraseña</Link>
-        <Link>No tengo cuenta</Link>
+        <Link to="/signup">No tengo cuenta</Link>
       </div>
     </TitleLayout>
   );

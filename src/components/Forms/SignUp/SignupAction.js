@@ -1,7 +1,7 @@
 import { redirect } from "react-router-dom";
 
 async function signup(obj) {
-  return obj;
+  return console.log(obj);
 }
 
 export async function action({ request }) {
@@ -9,7 +9,7 @@ export async function action({ request }) {
     Object.entries(await request.formData());
   const errors = {};
 
-  if (password.lenght < 7) {
+  if (typeof password !== "string" || password.length < 7) {
     errors.password = "La contraseña debe tener al menos 8 caracteres.";
   }
 

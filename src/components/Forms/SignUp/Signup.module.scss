@@ -38,3 +38,7 @@
 .link {
   @include link($secondary-link);
 }
+
+.error {
+  @include font(12px, map-get($secondary-color, main));
+}

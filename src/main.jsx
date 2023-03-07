@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from "./App";
-import { action } from "./components/Forms/Login/loginAction";
+import { action as loginAction } from "./components/Forms/Login/loginAction";
 import { AboutPage } from "./pages/About";
 import CollectionsPage from "./pages/Collections";
 import LoginPage from "./pages/Login";
@@ -14,6 +14,7 @@ import { ProductDetailPage } from "./pages/ProductDetail";
 import { ProductsPage } from "./pages/Products";
 import { RootLayout } from "./pages/Root";
 import { SignupPage } from "./pages/Signup";
+import { action as signupAction } from "./components/Forms/SignUp/SignupAction";
 
 const router = createBrowserRouter([
   {
@@ -28,13 +29,15 @@ const router = createBrowserRouter([
           { index: true, element: <CollectionsPage /> },
           {
             path: "products",
-            element: <ProductsPage />,
-            children: [{ path: ":id", element: <ProductDetailPage /> }],
+            children: [
+              { index: true, element: <ProductsPage /> },
+              { path: ":id", element: <ProductDetailPage /> },
+            ],
           },
         ],
       },
-      { path: "login", element: <LoginPage />, action: action },
-      { path: "signup", element: <SignupPage /> },
+      { path: "login", element: <LoginPage />, action: loginAction },
+      { path: "signup", element: <SignupPage />, action: signupAction },
     ],
   },
 ]);

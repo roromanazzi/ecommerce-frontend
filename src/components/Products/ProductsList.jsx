@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ProductItem } from "./ProductItem";
 import styles from "./ProductList.module.scss";
 
@@ -59,13 +60,13 @@ export const ProductsList = () => {
     <div className={styles.listContainer}>
       {data.map((item) => {
         return (
-          <div key={item.id}>
+          <Link key={item.id} to={`${item.id}`} className={styles.product}>
             <ProductItem
               title={item.title}
               price={item.price}
               imgSrc={item.imgSrc}
             ></ProductItem>
-          </div>
+          </Link>
         );
       })}
     </div>

@@ -10,7 +10,7 @@ const SignUpForm = () => {
 
   return (
     <>
-      <Form className={styles.form}>
+      <Form method="post" className={styles.form}>
         <div className={styles.formContainer}>
           <div className="requiredInfo">
             <h3 className={styles.formTitle}>Información de usuario</h3>
@@ -21,24 +21,27 @@ const SignUpForm = () => {
               type={"text"}
               name={"firstName"}
               id={"firstName"}
-              required={"true"}
-            ></Input>
+              // required={"true"}
+            />
+            {errors?.name && <p className={styles.error}>{errors.name}</p>}
             <Input
               variant={"longInput"}
               label={"Apellido"}
               type={"text"}
               name={"lastName"}
               id={"lastName"}
-              required={"true"}
-            ></Input>
+              // required={"true"}
+            />
+            {errors?.name && <p className={styles.error}>{errors.name}</p>}
             <Input
               variant={"longInput"}
               label={"Email"}
               type={"email"}
               name={"email"}
               id={"email"}
-              required={"true"}
-            ></Input>
+              // required={"true"}
+            />
+            {errors?.email && <p className={styles.error}>{errors.email}</p>}
             <div className={styles.shortInputContainer}>
               <Input
                 variant={"shortInput"}
@@ -46,17 +49,24 @@ const SignUpForm = () => {
                 type={"password"}
                 name={"password"}
                 id={"password"}
-                required={"true"}
-              ></Input>
+                // required={"true"}
+              />
+
               <Input
                 variant={"shortInput"}
                 label={"Repetir contraseña"}
                 type={"password"}
                 name={"comparePassword"}
                 id={"comparePassword"}
-                required={"true"}
+                // required={"true"}
               ></Input>
             </div>
+            {errors?.password && (
+              <p className={styles.error}>{errors.password}</p>
+            )}
+            {errors?.password && (
+              <p className={styles.error}>{errors.differentPassword}</p>
+            )}
           </div>
           <div className="unrequiredInfo">
             <h3 className={styles.formTitle}>Datos de envío</h3>
@@ -67,14 +77,14 @@ const SignUpForm = () => {
               type={"text"}
               name={"address"}
               id={"address"}
-            ></Input>
+            />
             <Input
               variant={"longInput"}
               label={"Ciudad"}
               type={"text"}
               name={"city"}
               id={"city"}
-            ></Input>
+            />
             <div className={styles.shortInputContainer}>
               <Input
                 variant={"shortInput"}
@@ -82,14 +92,14 @@ const SignUpForm = () => {
                 type={"text"}
                 name={"country"}
                 id={"country"}
-              ></Input>
+              />
               <Input
                 variant={"shortInput"}
                 label={"CP"}
                 type={"text"}
                 name={"postalCode"}
                 id={"postalCode"}
-              ></Input>
+              />
             </div>
             <Input
               variant={"longInput"}
@@ -97,7 +107,7 @@ const SignUpForm = () => {
               type={"number"}
               name={"phoneNumber"}
               id={"phoneNumber"}
-            ></Input>
+            />
           </div>
         </div>
         <div className={styles.checkboxContainer}>
