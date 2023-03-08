@@ -36,6 +36,7 @@ legend {
 
 .input {
   visibility: hidden;
+  position: absolute;
 }
 
 .input:checked ~ .label {

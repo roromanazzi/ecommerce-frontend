@@ -25,6 +25,12 @@ $fourth-color: (
   "dark": #100f15,
 );
 
+$error: (
+  "main": red,
+  "dark": rgb(91, 37, 37),
+  "light": rgb(214, 154, 154),
+);
+
 $font: "Jura", sans-serif;
 
 // link variants dark theme

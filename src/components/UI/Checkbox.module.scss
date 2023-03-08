@@ -23,6 +23,7 @@
 
 .container input {
   visibility: hidden;
+  position: absolute;
 }
 
 .container input:checked ~ .label {

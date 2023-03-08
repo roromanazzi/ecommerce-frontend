@@ -1,11 +1,11 @@
 import { redirect } from "react-router-dom";
 
 async function signup(obj) {
-  return console.log(obj);
+  return obj;
 }
 
 export async function action({ request }) {
-  const { firstName, lastName, email, password, comparePassword } =
+  const { firstName, lastName, email, password, comparePassword, tyc } =
     Object.entries(await request.formData());
   const errors = {};
 
@@ -25,10 +25,14 @@ export async function action({ request }) {
     errors.name = "Ingrese un nombre válido.";
   }
 
+  if (!tyc) {
+    errors.tyc = "Debes aceptar términos y condiciones";
+  }
+
   if (Object.keys(errors).length > 0) {
     return errors;
   }
 
-  await signup({ firstName, lastName, email, password });
+  await signup({ firstName, lastName, email, password, tyc });
   return redirect("/");
 }
