@@ -1,0 +1,30 @@
+@import "/src/styles/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.shortInputContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formTitle {
+  @include font(16px, map-get($secondary-color, main));
+  @include title-bg(map-get($fourth-color, main), 32px);
+  margin-top: 16px;
+}
+
+.formSubtitle {
+  @include font(12px, map-get($secondary-color, main));
+}
