@@ -1,4 +1,5 @@
 import "./App.css";
+import { CartActions } from "./components/CartActions";
 
 function App() {
   return <></>;
