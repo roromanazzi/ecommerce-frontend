@@ -15,12 +15,14 @@ import { ProductsPage } from "./pages/Products";
 import { RootLayout } from "./pages/Root";
 import { SignupPage } from "./pages/Signup";
 import { action as signupAction } from "./components/Forms/SignUp/SignupAction";
+import { HomePage } from "./pages/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     children: [
+      { index: true, element: <HomePage /> },
       { path: "home", element: <App /> },
       { path: "about", element: <AboutPage /> },
       {
