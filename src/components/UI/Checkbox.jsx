@@ -7,8 +7,8 @@ const Checkbox = ({
   onSelect,
   id,
   name,
-  value,
   checked,
+  defaultChecked,
 }) => {
   return (
     <div className={styles.container}>
@@ -17,9 +17,9 @@ const Checkbox = ({
         id={id}
         name={name}
         type="checkbox"
+        defaultChecked={defaultChecked}
         placeholder={placeholder}
-        onSelect={onSelect}
-        value={value}
+        onChange={onSelect}
         checked={checked}
       />
       {label && (
