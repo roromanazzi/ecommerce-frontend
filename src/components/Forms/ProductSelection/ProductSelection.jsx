@@ -2,15 +2,16 @@ import RadioInput from "../../UI/RadioInput";
 import React from "react";
 import Input from "../../UI/Input";
 import Button from "../../UI/Button";
-import { Form } from "react-router-dom";
+import { Form, useActionData } from "react-router-dom";
 import styles from "./ProductSelection.module.scss";
 
 export const ProductSelection = () => {
-  const productDescription = `Material: 100% algodón suave y duradero.\n
-Estilo: Camiseta de manga corta con cuello redondo y corte clásico.\n
-Diseño: Pepito perez.\n
-Cuidado: Lavar a máquina en agua fría con colores similares. Secar en secadora a baja temperatura o dejar secar al aire libre para una vida útil más larga. \n
+  const productDescription = `Material: 100% algodón suave y duradero. 
+Estilo: Camiseta de manga corta con cuello redondo y corte clásico.
+Diseño: Pepito perez.
+Cuidado: Lavar a máquina en agua fría con colores similares. Secar en secadora a baja temperatura o dejar secar al aire libre para una vida útil más larga.
 `;
+  const errors = useActionData();
 
   const sizes = [
     {
@@ -58,10 +59,27 @@ Cuidado: Lavar a máquina en agua fría con colores similares. Secar en secadora
       <p className={styles.productDescription}>{productDescription}</p>
       <div className={styles.wrapper}>
         <p className={styles.price}>$3400</p>
-        <Form className={styles.formContainer}>
+
+        <Form method="post" className={styles.formContainer}>
           <div className={styles.dataContainer}>
-            <RadioInput data={sizes} title={"Talle"} />
-            <RadioInput data={colors} title={"Color"} />
+            <div className={styles.checkboxContainer}>
+              <RadioInput
+                data={sizes}
+                title={"Talle"}
+                name={"size"}
+                defaultChecked={null}
+              />
+              {errors?.size && <p className={styles.error}>{errors.size}</p>}
+            </div>
+            <div className={styles.checkboxContainer}>
+              <RadioInput
+                data={colors}
+                title={"Color"}
+                name={"color"}
+                defaultChecked={null}
+              />
+              {errors?.color && <p className={styles.error}>{errors.color}</p>}
+            </div>
           </div>
           <Input
             variant={"noLabelInput"}
@@ -70,6 +88,7 @@ Cuidado: Lavar a máquina en agua fría con colores similares. Secar en secadora
             name={"amount"}
             id={"amount"}
           />
+          {errors?.amount && <p className={styles.error}>{errors.amount}</p>}
           <Button variant={"primary"} type={"submit"}>
             Agregar al carrito
           </Button>

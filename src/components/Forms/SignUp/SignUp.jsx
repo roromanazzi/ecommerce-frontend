@@ -74,8 +74,8 @@ const SignUpForm = () => {
         <div className={styles.checkboxContainer}>
           <Checkbox
             label={"Acepto términos y condiciones"}
-            id={"tyc"}
-            name={"tyc"}
+            id={"termsAndConditions"}
+            name={"termsAndConditions"}
           />
           <Checkbox
             label={"Quiero suscribirme al newsletter"}
@@ -84,7 +84,9 @@ const SignUpForm = () => {
             name={"newsletter"}
           />
         </div>
-        {errors?.tyc && <p className={styles.error}>{errors.tyc}</p>}
+        {errors?.termsAndConditions && (
+          <p className={styles.error}>{errors.termsAndConditions}</p>
+        )}
         <Link className={styles.link}>Leer términos y condiciones</Link>
         <Button type={"submit"} variant={"primary"}>
           Aceptar

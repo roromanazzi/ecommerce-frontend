@@ -41,7 +41,7 @@
 }
 
 .error {
-  @include font(12px, map-get($error, light));
+  @include error();
   padding-top: 8px;
 }
 

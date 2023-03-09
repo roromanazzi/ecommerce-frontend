@@ -15,6 +15,7 @@ import { ProductsPage } from "./pages/Products";
 import { RootLayout } from "./pages/Root";
 import { SignupPage } from "./pages/Signup";
 import { action as signupAction } from "./components/Forms/SignUp/SignupAction";
+import { action as productSelectionAction } from "./components/Forms/ProductSelection/ProductSelectionAction";
 // import { HomePage } from "./pages/Home";
 
 const router = createBrowserRouter([
@@ -33,7 +34,11 @@ const router = createBrowserRouter([
             path: "products",
             children: [
               { index: true, element: <ProductsPage /> },
-              { path: ":id", element: <ProductDetailPage /> },
+              {
+                path: ":id",
+                element: <ProductDetailPage />,
+                action: productSelectionAction,
+              },
             ],
           },
         ],

@@ -7,8 +7,8 @@ import { TitleLayout } from "./Root";
 export const ProductDetailPage = () => {
   return (
     <>
+      <TitleLayout title={"Seawolf Collection"} />
       <div className={styles.container}>
-        <TitleLayout title={"Seawolf Collection"} />
         <img src={imgSrc} className={styles.productImg} />
         <ProductSelection />
       </div>

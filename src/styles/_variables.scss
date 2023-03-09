@@ -44,11 +44,18 @@ $secondary-link: (
   "hover-color": map-get($third-color, main),
 );
 
+@mixin error {
+  font-family: $font;
+  color: map-get($error, light);
+  font-size: 12px;
+  text-align: center;
+}
+
 @mixin title-bg($bg-color, $height) {
   height: $height;
   line-height: $height;
   width: 100%;
-  margin: 1px;
+  margin: 1px, 0;
 
   background-color: $bg-color;
   border-radius: 15px;
