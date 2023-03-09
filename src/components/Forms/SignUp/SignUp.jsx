@@ -80,6 +80,7 @@ const SignUpForm = () => {
           <Checkbox
             label={"Quiero suscribirme al newsletter"}
             id={"newsletter"}
+            defaultChecked
             name={"newsletter"}
           />
         </div>

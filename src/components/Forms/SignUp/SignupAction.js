@@ -5,9 +5,11 @@ async function signup(obj) {
 }
 
 export async function action({ request }) {
-  const { firstName, lastName, email, password, comparePassword, tyc } =
-    Object.entries(await request.formData());
+  const formData = Object.fromEntries(await request.formData());
   const errors = {};
+
+  const { firstName, lastName, email, password, comparePassword, tyc } =
+    formData;
 
   if (typeof password !== "string" || password.length < 7) {
     errors.password = "La contraseña debe tener al menos 8 caracteres.";
@@ -25,7 +27,7 @@ export async function action({ request }) {
     errors.name = "Ingrese un nombre válido.";
   }
 
-  if (!tyc) {
+  if (tyc !== "on") {
     errors.tyc = "Debes aceptar términos y condiciones";
   }
 
