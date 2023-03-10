@@ -1,6 +1,9 @@
 @import "/src/styles/variables";
 
-*::-webkit-scrollbar {
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-button,
+*::-webkit-scrollbar-corner,
+*::-webkit-scrollbar-thumb {
   visibility: hidden;
   position: absolute;
 }

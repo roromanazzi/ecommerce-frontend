@@ -3,8 +3,15 @@ import Designer from "../components/Collections/Designer";
 import { ProductsList } from "../components/Collections/ProductsList";
 import { TitleLayout } from "./Root";
 import styles from "./Products.module.scss";
+import { Filter } from "../components/UI/Filter";
 
 export const ProductsPage = () => {
+  const categories = [
+    { name: "Remeras" },
+    { name: "Gorritos" },
+    { name: "Medias" },
+  ];
+
   return (
     <TitleLayout
       leftSubtitle="AW 2023"
@@ -21,7 +28,7 @@ export const ProductsPage = () => {
           imgSrc="https://manofmany.com/wp-content/uploads/2021/03/How-to-Look-Good-in-Photos-Master-Your-Smile.jpg"
         />
         <ProductsList />
-        <div className={styles.filter}></div>
+        <Filter data={categories} title={"Filtrar"} />
       </div>
     </TitleLayout>
   );
