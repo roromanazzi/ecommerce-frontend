@@ -7,8 +7,10 @@ export const ProductItem = ({ imgSrc, title, price }) => {
       <div className={styles.imgContainer}>
         <img src={imgSrc} className={styles.productImg} />
       </div>
-      <h2 className={styles.productTitle}>{title}</h2>
-      <p className={styles.productPrice}>${price}</p>
+      <h2 className={styles.productTitle}>
+        {title}
+        <span className={styles.productPrice}>| ${price}</span>
+      </h2>
     </div>
   );
 };

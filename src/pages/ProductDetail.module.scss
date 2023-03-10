@@ -14,8 +14,34 @@
   height: 100%;
 }
 
+.imgContainer {
+  display: flex;
+}
+
+.secondaryImgContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .productImg {
   width: 320px;
   height: 420px;
   border-radius: 15px;
+  margin: 2px;
+}
+
+.secondaryImg {
+  width: 160px;
+  height: 210px;
+  border-radius: 15px;
+  margin: 2px;
+}
+
+.sugestion {
+  width: 100px;
+  height: 30%;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
 }

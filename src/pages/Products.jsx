@@ -7,9 +7,9 @@ import { Filter } from "../components/UI/Filter";
 
 export const ProductsPage = () => {
   const categories = [
-    { name: "Remeras" },
-    { name: "Gorritos" },
-    { name: "Medias" },
+    { name: "Remeras", id: 1 },
+    { name: "Gorritos", id: 2 },
+    { name: "Medias", id: 3 },
   ];
 
   return (
@@ -18,6 +18,7 @@ export const ProductsPage = () => {
       title="Seawolf collection"
       rightSubtitle="Pepito pérez"
     >
+      <Filter data={categories} title={"Filtrar"} />
       <div className={styles.container}>
         <Designer
           name="Pepito Perez"
@@ -28,7 +29,6 @@ export const ProductsPage = () => {
           imgSrc="https://manofmany.com/wp-content/uploads/2021/03/How-to-Look-Good-in-Photos-Master-Your-Smile.jpg"
         />
         <ProductsList />
-        <Filter data={categories} title={"Filtrar"} />
       </div>
     </TitleLayout>
   );
