@@ -1,13 +1,18 @@
 import React from "react";
 import { AddressForm } from "../components/Forms/Address/AddressForms";
+import { PreCheckoutForm } from "../components/Forms/Checkout/PreCheckout";
 import { Table } from "../components/UI/Table";
 import { TitleLayout } from "./Root";
+import styles from "./Cart.module.scss";
 
 const CartPage = () => {
   return (
-    <div>
+    <div className={styles.page}>
       <TitleLayout title={"Cart"} />
-      <Table />
+      <div className={styles.container}>
+        <Table className={styles.table} />
+        <PreCheckoutForm className={styles.form} />
+      </div>
     </div>
   );
 };

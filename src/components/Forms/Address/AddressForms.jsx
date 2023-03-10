@@ -3,11 +3,10 @@ import styles from "./AddressForm.module.scss";
 
 import React from "react";
 import { Form } from "react-router-dom";
-import Checkbox from "../../UI/Checkbox";
 
 export const AddressForm = () => {
   return (
-    <Form className={styles.form}>
+    <div className={styles.form}>
       <div className={styles.formContainer}>
         <h3 className={styles.formTitle}>Datos de envío</h3>
         <p className={styles.formSubtitle}>Podés completar esto luego</p>
@@ -49,6 +48,6 @@ export const AddressForm = () => {
           id={"phoneNumber"}
         />
       </div>
-    </Form>
+    </div>
   );
 };

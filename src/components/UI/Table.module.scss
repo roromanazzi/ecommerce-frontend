@@ -11,19 +11,8 @@
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: inherit;
   height: 40px;
-}
-
-.extraText {
-  @include font(12px, map-get($secondary-color, main));
-}
-
-.productInfo,
-.productActions {
-  width: 200px;
 
   display: flex;
   justify-content: space-evenly;

@@ -7,39 +7,30 @@ export const Table = ({ actions }) => {
       title: "remera pedro",
       price: 2500,
       size: "S",
-      src: "../img/JennyHaniver.svg",
+      src: "../../img/JennyHaniver.svg",
     },
   ];
 
   return (
     <table className={styles.container}>
-      {data.map((product) => (
-        <>
+      <tbody>
+        {data.map((product) => (
           <tr key={product.title} className={styles.row}>
-            <div className={styles.productInfo}>
-              {product.src && (
-                <td className={styles.productImg}>
-                  <img src={product.src} />
-                </td>
-              )}
-              <td className={styles.productTitle}>{product.title}</td>
-              {product.amount && (
-                <td className={styles.productAmount}>
-                  <span className={styles.extraText}>size</span>
-                  {product.amount}
-                </td>
-              )}
-              <td className={styles.productSize}>
-                <span className={styles.extraText}>size</span> {product.size}
+            {product.src && (
+              <td className={styles.productImg}>
+                <img src={product.src} />
               </td>
-            </div>
-            <div className={styles.productActions}>
-              <td className={styles.productPrice}>${product.price}</td>
-              {actions && <td className={styles.productActions}>{actions}</td>}
-            </div>
+            )}
+            <td className={styles.productTitle}>{product.title}</td>
+            {product.amount && (
+              <td className={styles.productAmount}>x {product.amount}</td>
+            )}
+            <td className={styles.productSize}>size {product.size}</td>
+            <td className={styles.productPrice}>${product.price}</td>
+            {actions && <td className={styles.productActions}>{actions}</td>}
           </tr>
-        </>
-      ))}
+        ))}
+      </tbody>
     </table>
   );
 };

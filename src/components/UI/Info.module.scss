@@ -1,0 +1,15 @@
+@import "/src/styles/variables";
+
+.container {
+  display: flex;
+  gap: 8px;
+}
+
+.title {
+  @include font(12px, map-get($secondary-color, main));
+}
+
+.data {
+  @include font(12px, map-get($secondary-color, main));
+  font-weight: 600;
+}

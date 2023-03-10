@@ -1,0 +1,28 @@
+@import "/src/styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.select {
+  width: 200px;
+  height: 28px;
+
+  background-color: white;
+  border: 0.5px solid map-get($third-color, main);
+  border-radius: 12px;
+
+  display: flex;
+
+  text-indent: 8px;
+  line-height: 28px;
+  font-size: 12px;
+  font-family: $font;
+}
+
+.legend {
+  text-align: left;
+}

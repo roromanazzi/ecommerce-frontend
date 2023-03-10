@@ -16,6 +16,7 @@ import { RootLayout } from "./pages/Root";
 import { SignupPage } from "./pages/Signup";
 import { action as signupAction } from "./components/Forms/SignUp/SignupAction";
 import { action as productSelectionAction } from "./components/Forms/ProductSelection/ProductSelectionAction";
+import CartPage from "./pages/Cart";
 // import { HomePage } from "./pages/Home";
 
 const router = createBrowserRouter([
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
         ],
       },
       { path: "login", element: <LoginPage />, action: loginAction },
+      { path: "cart", element: <CartPage /> },
       { path: "signup", element: <SignupPage />, action: signupAction },
     ],
   },

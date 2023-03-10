@@ -19,8 +19,14 @@ const Header = () => {
           src={logo}
         ></img>
         <h2 className={styles.brandName}>Jenny Haniver</h2>
-        <Link to={"/Login"} className={styles.link}>
+        <Link to={"/login"} className={styles.link}>
           Login
+        </Link>
+        <Link to={"/signup"} className={styles.link}>
+          Sign up
+        </Link>
+        <Link to={"/cart"} className={styles.link}>
+          Cart
         </Link>
       </div>
       <MainNavigation />

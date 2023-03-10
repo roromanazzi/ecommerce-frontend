@@ -32,5 +32,5 @@
 
 .secondary {
   @include button();
-  background-color: map-get($third-color, main);
+  background-color: map-get($fourth-color, main);
 }
