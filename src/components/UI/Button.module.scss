@@ -34,3 +34,37 @@
   @include button();
   background-color: map-get($fourth-color, main);
 }
+
+.icon {
+  @include button();
+  width: 40px;
+  height: 20px;
+
+  background-color: map-get($fourth-color, light);
+}
+
+.iconSecondary {
+  @include button();
+  width: 40px;
+  height: 20px;
+
+  background-color: map-get($fourth-color, main);
+}
+
+.iconRight {
+  @include button();
+  width: 40px;
+  height: 20px;
+
+  background-color: map-get($fourth-color, light);
+  border-radius: 0 16px 16px 0;
+}
+
+.iconLeft {
+  @include button();
+  width: 40px;
+  height: 20px;
+
+  background-color: map-get($fourth-color, light);
+  border-radius: 16px 0px 0px 16px;
+}

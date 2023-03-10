@@ -8,13 +8,19 @@
   @include font(12px, map-get($primary-color, main));
   border-radius: 15px;
   margin: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .row {
-  width: inherit;
+  width: 500px;
   height: 40px;
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+
+  border-bottom: 1px solid map-get($secondary-color, main);
 }

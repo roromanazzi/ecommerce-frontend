@@ -1,5 +1,5 @@
 import React from "react";
-import { CollectionsList } from "../components/Products/CollectionsList";
+import { CollectionsList } from "../components/Collections/CollectionsList";
 import { TitleLayout } from "./Root";
 
 const CollectionsPage = () => {

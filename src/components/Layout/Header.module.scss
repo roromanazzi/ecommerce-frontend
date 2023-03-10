@@ -10,8 +10,14 @@
   align-items: center;
 }
 
+.logoContainer {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .logo {
-  width: 80px;
 }
 
 .link {
@@ -19,5 +25,13 @@
 }
 
 .brandName {
+  width: 70%;
   text-align: center;
+}
+
+.actions {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }

@@ -8,26 +8,30 @@ const Header = () => {
   return (
     <>
       <div className={styles.headerContainer}>
-        <img
-          className={styles.logo}
-          style={{
-            color: "white",
-            filter: "invert(1)",
-            width: "40px",
-            marginLeft: "8px",
-          }}
-          src={logo}
-        ></img>
+        <div className={styles.logoContainer}>
+          <img
+            className={styles.logo}
+            style={{
+              color: "white",
+              filter: "invert(1)",
+              width: "40px",
+              marginLeft: "8px",
+            }}
+            src={logo}
+          ></img>
+        </div>
         <h2 className={styles.brandName}>Jenny Haniver</h2>
-        <Link to={"/login"} className={styles.link}>
-          Login
-        </Link>
-        <Link to={"/signup"} className={styles.link}>
-          Sign up
-        </Link>
-        <Link to={"/cart"} className={styles.link}>
-          Cart
-        </Link>
+        <div className={styles.actions}>
+          <Link to={"/login"} className={styles.link}>
+            Login
+          </Link>
+          <Link to={"/signup"} className={styles.link}>
+            Sign up
+          </Link>
+          <Link to={"/cart"} className={styles.link}>
+            Cart
+          </Link>
+        </div>
       </div>
       <MainNavigation />
     </>
