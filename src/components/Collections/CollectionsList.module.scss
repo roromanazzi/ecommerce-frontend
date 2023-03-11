@@ -4,26 +4,19 @@
   @include page();
 }
 
-.newArrival {
-  display: flex;
-  align-items: center;
+.collectionCard {
+  @include card($dark-card, 52px, inherit);
+  @include text(light);
+
+  flex-direction: row;
   justify-content: space-around;
 
-  @include title-bg(map-get($fourth-color, main), 32px);
-  @include font(12px, map-get($secondary-color, main));
-
-  height: 52px;
-
   margin: 8px 0;
+
   transition: 600ms;
 
   &:hover {
-    @include title-bg(map-get($primary-color, main), 52px);
-    display: flex;
-    align-items: center;
-
     height: 240px;
-    border-radius: 16px;
 
     background-size: cover;
     background-position: center;
@@ -33,15 +26,11 @@
   }
 }
 
-.newArrival:first-child {
+.collectionCard:first-child {
   height: 120px;
-  &:hover {
-    @include title-bg(map-get($primary-color, main), 52px);
-    display: flex;
-    align-items: center;
 
+  &:hover {
     height: 240px;
-    border-radius: 16px;
 
     background-size: cover;
     background-position: center;

@@ -6,10 +6,9 @@
 }
 
 .title {
-  @include font(12px, map-get($secondary-color, main));
+  @include text(light);
 }
 
 .data {
-  @include font(12px, map-get($secondary-color, main));
-  font-weight: 600;
+  @include text(light);
 }

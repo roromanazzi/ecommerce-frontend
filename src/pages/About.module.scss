@@ -8,8 +8,8 @@
 }
 
 .container {
-  @include font(12px, map-get($secondary-color, main));
-  height: 1200px;
+  @include text(light);
+
   display: flex;
   flex-direction: column;
   align-items: center;

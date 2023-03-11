@@ -1,13 +1,11 @@
 @import "/src/styles/variables";
 
 .headerContainer {
-  @include font(12px, map-get($secondary-color, light));
-  @include title-bg(map-get($primary-color, main), 42px);
+  @include text(extra-light);
+  @include card($dark-card, 48px, inherit);
 
-  width: inherit;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
 }
 
 .logoContainer {
@@ -17,11 +15,8 @@
   justify-content: flex-start;
 }
 
-.logo {
-}
-
 .link {
-  @include link($secondary-link);
+  @include link($light-link);
 }
 
 .brandName {

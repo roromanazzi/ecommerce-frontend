@@ -1,17 +1,16 @@
 @import "/src/styles/variables";
 
 .navbarContainer {
-  @include title-bg(map-get($primary-color, main), 36px);
+  @include card($dark-card, 32px, inherit);
 
-  display: flex;
   justify-content: flex-start;
+  flex-direction: row;
   gap: 24px;
-  padding-left: 16px;
-  align-items: center;
+  padding-left: 24px;
 }
 
 .navbarContainer li {
-  @include link($secondary-link);
+  @include link($light-link);
 }
 
 .navbarContainer a {

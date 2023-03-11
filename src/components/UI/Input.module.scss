@@ -30,7 +30,8 @@
 }
 
 label {
-  @include font(12px, map-get($secondary-color, main));
+  @include text(light);
+
   text-align: start;
   padding: 4px;
 }

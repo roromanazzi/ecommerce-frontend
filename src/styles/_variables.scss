@@ -1,4 +1,8 @@
-// colors dark theme
+$secondary-color: (
+  "main": #b2b2b2,
+  "light": #d9d9d9,
+  "dark": #6a6a6a,
+);
 
 $primary-color: (
   "main": #121420,
@@ -6,84 +10,75 @@ $primary-color: (
   "dark": #06060a,
 );
 
-$secondary-color: (
-  "main": #b2b2b2,
-  "light": #d9d9d9,
-  "dark": #6a6a6a,
-);
-
 $third-color: (
-  "main": #3e5c76,
-  "light": #5882a6,
-  "dark": #283c4c,
-  "transparent": #3e5c76b2,
-);
-
-$fourth-color: (
   "main": #2c2b3c,
   "light": #4b4965,
   "dark": #100f15,
 );
 
-$error: (
+$extra: (
   "main": red,
-  "dark": rgb(91, 37, 37),
-  "light": rgb(214, 154, 154),
+  "hover": #3e5c76,
+  "error": rgb(214, 154, 154),
 );
 
 $font: "Jura", sans-serif;
 
-// link variants dark theme
-$primary-link: (
-  "color": map-get($primary-color, main),
+$dark-link: (
+  "color": map-get($extra, hover),
   "hover-color": map-get($secondary-color, light),
 );
 
-$secondary-link: (
+$light-link: (
   "color": map-get($secondary-color, light),
-  "hover-color": map-get($third-color, main),
+  "hover-color": map-get($extra, hover),
 );
 
-@mixin error {
-  font-family: $font;
-  color: map-get($error, light);
-  font-size: 12px;
-  text-align: center;
-}
+$fonts: (
+  "extra-light": map-get($secondary-color, light),
+  "light": map-get($secondary-color, main),
+  "med-light": map-get($secondary-color, dark),
+  "dark": map-get($primary-color, dark),
+  "error": map-get($extra, error),
+);
 
-@mixin title-bg($bg-color, $height) {
+$light-card: (
+  "bg-color": map-get($secondary-color, light),
+  "shadow": 0 2px 2px 0 map-get($secondary-color, main),
+);
+
+$gray-card: (
+  "bg-color": map-get($secondary-color, main),
+  "shadow": 0 2px 2px 0 map-get($secondary-color, dark),
+);
+
+$dark-card: (
+  "bg-color": map-get($primary-color, main),
+  "shadow": 0 2px 2px 0 map-get($secondary-color, dark),
+);
+
+@mixin card($variant, $height, $width) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   height: $height;
   line-height: $height;
-  width: 100%;
-  margin: 1px, 0;
+  width: $width;
 
-  background-color: $bg-color;
-  border-radius: 15px;
+  background-color: map-get($variant, bg-color);
+  box-shadow: map-get($variant, shadow);
 }
 
-// brand name and page title
-@mixin font($font-size, $color) {
+@mixin text($variant) {
   font-family: $font;
   font-weight: 600;
   text-align: center;
 
-  color: $color;
-  font-size: $font-size;
+  color: map-get($fonts, $variant);
+  font-size: 12px;
 }
 
-// page layout
-@mixin page {
-  width: 100%;
-  padding: 2px 4px;
-  height: 100vh;
-  overflow-x: hidden;
-
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-// links
 @mixin link($variant) {
   all: unset;
   cursor: pointer;
@@ -102,6 +97,15 @@ $secondary-link: (
   &:active {
     color: map-get($variant, hover-color);
   }
+}
+
+@mixin page {
+  width: 100%;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 a,

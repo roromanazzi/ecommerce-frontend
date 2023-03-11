@@ -1,26 +1,28 @@
 @import "/src/styles/variables";
 
 .container {
-  height: 200px;
+  height: 320px;
   width: 520px;
-
-  background-color: map-get($secondary-color, light);
-  @include font(12px, map-get($primary-color, main));
+  background-color: rgb(238, 238, 238);
+  // background-color: map-get($secondary-color, main);
+  @include text(dark);
   border-radius: 15px;
   margin: 40px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  box-shadow: 0 2px 2px 0 map-get($secondary-color, dark);
 }
 
 .row {
   width: 500px;
-  height: 40px;
+  height: 60px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 1px solid map-get($secondary-color, main);
+  border-bottom: 1px solid map-get($secondary-color, light);
 }

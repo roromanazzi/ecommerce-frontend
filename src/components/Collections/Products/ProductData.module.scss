@@ -1,0 +1,26 @@
+@import "/src/styles/variables";
+
+.container {
+  width: 240px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  line-height: 20px;
+}
+
+.productTitle {
+  @include text(light);
+  @include card($dark-card, 32px, 240px);
+}
+
+.productPrice {
+  @include text(dark);
+  font-size: 16px;
+}
+
+.productDescription {
+  @include text(dark);
+  text-align: left;
+}

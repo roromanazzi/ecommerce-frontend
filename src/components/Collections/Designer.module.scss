@@ -1,52 +1,61 @@
 @import "/src/styles/variables";
 
 .container {
-  @include font(12px, map-get($secondary-color, main));
-  width: 20%;
-  height: 75vh;
+  @include text(dark);
+  @include card($light-card, inherit, 20%);
 
-  background-color: map-get($fourth-color, dark);
-  border-radius: 15px;
+  box-shadow: none;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   gap: 20px;
-
-  margin-left: 20px;
-  padding: 20px;
+  margin-top: 20px;
 }
 
 .img {
   width: 200px;
-  border-radius: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 map-get($secondary-color, dark);
 }
 
 .infoContainer {
+  @include text(med-light);
+
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  height: 60px;
   gap: 8px;
+  padding: 8px 0;
 
-  border-bottom: 1px solid map-get($secondary-color, dark);
-}
-
-.name {
-  @include font(20px, map-get($secondary-color, main));
-  width: 200px;
-
-  padding-top: 4px;
-}
-
-.info {
-  width: 200px;
-  @include font(12px, map-get($secondary-color, dark));
+  border-bottom: 0.5px solid map-get($secondary-color, dark);
 }
 
 .text {
   width: 180px;
   text-align: center;
   line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: auto;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow: scroll;
+  }
+  .mainData {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+  }
+  .infoContainer {
+    justify-content: center;
+    justify-content: flex-start;
+    border-bottom: none;
+    width: max-content;
+  }
+  .text {
+    width: 300px;
+  }
 }

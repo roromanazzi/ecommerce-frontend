@@ -1,17 +1,16 @@
 @import "/src/styles/variables";
 
 .titleContainer {
-  @include font(12px, map-get($secondary-color, light));
-  @include title-bg(map-get($fourth-color, main), 36px);
+  @include text(dark);
+  @include card($light-card, 32px, inherit);
 
-  display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-around;
-  margin-bottom: 20px;
 }
 
 .subtitle {
-  font-weight: 100;
+  font-weight: 600;
+  font-size: 12px;
 }
 
 .newArrival {
@@ -26,5 +25,5 @@
 }
 
 .newArrival .titleContainer {
-  @include title-bg(map-get($fourth-color, dark), 52px);
+  @include card($dark-card, 52px, inherit);
 }

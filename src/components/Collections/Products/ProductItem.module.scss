@@ -1,0 +1,49 @@
+@import "/src/styles/variables";
+
+.productContainer {
+  @include card($light-card, 280px, 240px);
+
+  position: relative;
+}
+
+.productTitle {
+  @include card($light-card, 32px, inherit);
+  @include text(dark);
+
+  position: absolute;
+  bottom: 0%;
+
+  flex-direction: row;
+  justify-content: center;
+
+  transition: 300ms;
+}
+
+.productContainer:hover .productTitle {
+  @include text(extra-light);
+  @include card($dark-card, 48px, inherit);
+
+  flex-direction: row;
+
+  transition: 300ms;
+}
+
+.productContainer:hover .imgContainer {
+  transition: 300ms;
+}
+
+.productPrice {
+  @include text(med-light);
+}
+
+.imgContainer {
+  width: 240px;
+  height: 280px;
+
+  transition: 300ms;
+}
+
+.productImg {
+  width: 240px;
+  height: 280px;
+}

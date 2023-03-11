@@ -9,14 +9,10 @@
 
 .formContainer {
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-.shortInputContainer {
-  display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 160px;
 }
 
 .checkboxContainer {
@@ -27,21 +23,21 @@
 }
 
 .formTitle {
-  @include font(16px, map-get($secondary-color, main));
-  @include title-bg(map-get($fourth-color, main), 32px);
-  margin-top: 16px;
+  @include text(light);
+  @include card($dark-card, 32px, inherit);
+  // margin-top: 16px;
 }
 
 .formSubtitle {
-  @include font(12px, map-get($secondary-color, main));
+  @include text(light);
 }
 
 .link {
-  @include link($secondary-link);
+  @include link($dark-link);
 }
 
 .error {
-  @include error();
+  @include text(error);
   padding-top: 8px;
 }
 

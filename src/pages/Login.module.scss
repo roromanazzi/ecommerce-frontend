@@ -8,7 +8,7 @@
 }
 
 .links a {
-  @include link($secondary-link);
+  @include link($dark-link);
   display: flex;
   flex-direction: column;
   align-items: center;
