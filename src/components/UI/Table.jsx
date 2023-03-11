@@ -1,16 +1,7 @@
 import React from "react";
 import styles from "./Table.module.scss";
 
-export const Table = ({ actions }) => {
-  const data = [
-    {
-      title: "remera pedro",
-      price: 2500,
-      size: "S",
-      src: "../../img/JennyHaniver.svg",
-    },
-  ];
-
+export const Table = ({ actions, data, products }) => {
   return (
     <table className={styles.container}>
       <tbody>

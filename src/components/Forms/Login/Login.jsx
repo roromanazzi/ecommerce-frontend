@@ -19,7 +19,7 @@ export const LoginForm = () => {
         />
         {errors?.email && <p className={styles.error}>{errors.email}</p>}
         <Input
-          label={"Password"}
+          label={"Contraseña"}
           variant={"longInput"}
           name={"password"}
           id={"password"}
